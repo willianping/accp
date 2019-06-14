@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <properties resource="mysqldb.properties"/>
+    <!-- 1 配置系统参数(默认) -->
+    <settings>
+        <!--  开启懒加载  -->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <!-- 关闭立即加载 -->
+        <setting name="aggressiveLazyLoading" value="false"/>
+        <!-- 支持二级缓存 -->
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+    <typeAliases>
+        <package name="com.bdqn.po"/>
+    </typeAliases>
+
+    <!-- 3 引入DAO 接口 -->
+    <mappers>
+        <package name="com.bdqn.dao"/>
+    </mappers>
+</configuration>

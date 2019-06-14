@@ -1,0 +1,3 @@
+0:0:0:0:0:0:0:1 - - [30/May/2019:16:32:44 +0800] "GET /ssm_maven_controller HTTP/1.1" 302 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [30/May/2019:16:32:46 +0800] "GET /ssm_maven_controller/ HTTP/1.1" 200 310 http-bio-8080-exec-5 1221
+0:0:0:0:0:0:0:1 - - [30/May/2019:16:32:50 +0800] "GET /ssm_maven_controller/list.bdqn HTTP/1.1" 200 5141 http-bio-8080-exec-6 594

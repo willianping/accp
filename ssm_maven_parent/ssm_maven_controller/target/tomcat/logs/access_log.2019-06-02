@@ -1,0 +1,6 @@
+0:0:0:0:0:0:0:1 - - [02/Jun/2019:14:40:03 +0800] "GET /ssm_maven_controller HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [02/Jun/2019:14:40:07 +0800] "GET /ssm_maven_controller/ HTTP/1.1" 200 311 http-bio-8080-exec-2 4230
+0:0:0:0:0:0:0:1 - - [02/Jun/2019:14:40:08 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-3 0
+0:0:0:0:0:0:0:1 - - [02/Jun/2019:14:44:05 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [02/Jun/2019:14:44:05 +0800] "GET /ssm_maven HTTP/1.1" 302 - http-bio-8080-exec-2 0
+0:0:0:0:0:0:0:1 - - [02/Jun/2019:14:44:09 +0800] "GET /ssm_maven/ HTTP/1.1" 200 311 http-bio-8080-exec-3 4123

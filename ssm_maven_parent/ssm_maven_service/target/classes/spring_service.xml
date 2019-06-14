@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--3 事务管理(AOP设计)-声明式事务-->
+    <!--事务管理器-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!--配置事务的通知-->
+    <tx:advice id="transactionAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <!--不同的方法使用不同的事务管理
+                propagation-事务的传播特性(支持事务的等级)
+                rollback-for:配置需要回滚的事务类型，多个使用,默认运行时异常自动回滚
+                read-only：是否只读
+                timeout:超时时间
+                name:方法名
+            -->
+            <tx:method name="*" propagation="REQUIRED" />
+        </tx:attributes>
+    </tx:advice>
+    <!--事务一般控制到Service层-->
+    <aop:config>
+        <aop:pointcut id="pointcut" expression="execution(* com.bdqn.service..*.*(..))"/>
+        <aop:advisor advice-ref="transactionAdvice" pointcut-ref="pointcut"/>
+    </aop:config>
+
+    <!--配置serivce
+    autowire:
+    1 byType 按照类型自动注入
+    2 byName 按照名称自动注入
+    -->
+    <bean autowire="byType" id="stuservice" class="com.bdqn.service.impl.StudentServiceImpl"/>
+</beans>

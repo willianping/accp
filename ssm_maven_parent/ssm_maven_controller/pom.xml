@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>ssm_maven_parent</artifactId>
+        <groupId>com.bdqn</groupId>
+        <version>v1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>ssm_maven_controller</artifactId>
+    <packaging>war</packaging>
+
+    <name>ssm_maven_controller</name>
+    <!-- FIXME change it to the project's website -->
+    <url>http://www.example.com</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+    </properties>
+
+
+    <!--依赖Service modul-->
+    <dependencies>
+        <dependency>
+            <groupId>com.bdqn</groupId>
+            <artifactId>ssm_maven_service</artifactId>
+            <version>v1.0</version>
+        </dependency>
+    </dependencies>
+
+</project>
