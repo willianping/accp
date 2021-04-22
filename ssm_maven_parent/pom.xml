@@ -20,7 +20,7 @@
     <properties>
         <!--定义版本号-->
         <!-- mybatis版本号 -->
-        <mybatis.version>3.4.1</mybatis.version>
+        <mybatis.version>3.5.6</mybatis.version>
         <!-- spring版本号 -->
         <spring.version>4.1.6.RELEASE</spring.version>
         <!-- junit版本号 -->
